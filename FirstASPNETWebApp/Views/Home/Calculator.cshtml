@@ -22,21 +22,8 @@
     <a href="@Url.Action("Index", "Home")">Back to Home</a>
 </nav>
 
-<script>
-    $(document).ready(function () {
-        $("#calculateButton").click(function () {
-            let hours = $("#hours").val();
-            let rate = $("#rate").val();
-            let totalOutput = $("#total");
+<!-- Ensure jQuery is loaded (if not already included in your layout) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-            if (hours <= 0 || isNaN(hours)) {
-                alert("Please enter a valid positive number of hours.");
-                totalOutput.val("");
-                return;
-            }
-
-            let total = hours * rate;
-            totalOutput.val("$" + total.toFixed(2));
-        });
-    });
-</script>
+<!-- Reference the external JS file -->
+<script src="~/js/site.js"></script>
