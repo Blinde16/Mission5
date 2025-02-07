@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Tutoring Cost Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Tutoring Cost Calculator</h1>
+
+<form>
+    <label for="hours">Enter Hours Needed:</label>
+    <input type="number" id="hours" min="1" required>
+    <br>
+    <label for="rate">Hourly Rate:</label>
+    <input type="text" id="rate" value="20" readonly>
+    <br>
+    <button type="button" id="calculateButton">Calculate Total</button>
+    <br>
+    <label for="total">Total Cost:</label>
+    <input type="text" id="total" readonly>
+</form>
+
+<nav>
+    <a href="@Url.Action("Index", "Home")">Back to Home</a>
+</nav>
+
+<script>
+    $(document).ready(function () {
+        $("#calculateButton").click(function () {
+            let hours = $("#hours").val();
+            let rate = $("#rate").val();
+            let totalOutput = $("#total");
+
+            if (hours <= 0 || isNaN(hours)) {
+                alert("Please enter a valid positive number of hours.");
+                totalOutput.val("");
+                return;
+            }
+
+            let total = hours * rate;
+            totalOutput.val("$" + total.toFixed(2));
+        });
+    });
+</script>

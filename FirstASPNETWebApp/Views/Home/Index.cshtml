@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Woodworking Hobby";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="icon" href="/images/wood-icon.png" type="image/png">
+</head>
+
+<h1>Welcome to My Woodworking Hobby</h1>
+
+<main>
+    <section>
+        <img src="~/images/woodworking1.jpg" alt="Woodworking Project" width="400">
+        <img src="~/images/woodworking2.jpg" alt="Woodworking Tools" width="400">
+        <p>Woodworking is a fantastic hobby that allows you to create beautiful and functional pieces from raw materials. The ability to craft something with your own hands brings a deep sense of satisfaction and accomplishment. Whether it's carving, joinery, or furniture making, woodworking provides endless opportunities for creativity and skill-building.</p>
+        <p>One of the most rewarding aspects of woodworking is the ability to turn a simple piece of wood into something both practical and artistic. With the right tools and techniques, you can bring your ideas to life, creating anything from rustic home decor to finely crafted heirloom furniture. The process of measuring, cutting, shaping, and finishing each piece allows for both precision and artistic expression.</p>
+        <p>Through this site, I share my passion for woodworking and offer tutoring services for those who want to start their own woodworking journey. Whether you are a beginner looking to learn the basics or an experienced craftsman refining your skills, I’m here to help guide you through the rewarding world of woodworking.</p>
+    </section>
+    <nav>
+        <a href="@Url.Action("Calculator", "Home")">Tutoring Cost Calculator</a>
+    </nav>
+</main>
